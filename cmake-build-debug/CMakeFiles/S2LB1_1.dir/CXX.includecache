@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Michael/CLionProjects/S2LB1.1/Fraction.cpp
+map
+-
+algorithm
+-
+Fraction.h
+C:/Users/Michael/CLionProjects/S2LB1.1/Fraction.h
+RunTimeException.h
+C:/Users/Michael/CLionProjects/S2LB1.1/RunTimeException.h
+
+C:/Users/Michael/CLionProjects/S2LB1.1/Fraction.h
+vector
+-
+ostream
+-
+RunTimeException.h
+C:/Users/Michael/CLionProjects/S2LB1.1/RunTimeException.h
+
+C:/Users/Michael/CLionProjects/S2LB1.1/RunTimeException.h
+
+C:/Users/Michael/CLionProjects/S2LB1.1/main.cpp
+iostream
+-
+Fraction.cpp
+C:/Users/Michael/CLionProjects/S2LB1.1/Fraction.cpp
+
