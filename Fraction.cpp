@@ -7,9 +7,7 @@
 #include "Fraction.h"
 #include "RunTimeException.h"
 
-Fraction::Fraction() {
-    Fraction(1, 1);
-}
+Fraction::Fraction() : Fraction(1, 1) {}
 
 Fraction::Fraction(int numerator, int denominator) : numerator(numerator), denominator(denominator) {}
 
@@ -18,9 +16,9 @@ void Fraction::setFraction(Fraction fraction) {
     this->denominator = fraction.denominator;
 }
 
-int Fraction::getNumerator() { return numerator; }
+int Fraction::getNumerator() const { return numerator; }
 
-int Fraction::getDenominator() { return denominator; }
+int Fraction::getDenominator() const { return denominator; }
 
 void Fraction::setNumerator(int numerator) { this->numerator = numerator; }
 
@@ -62,7 +60,6 @@ Fraction Fraction::division(Fraction fraction) {
     Fraction fractionResult = Fraction(numerator * fraction.denominator, denominator * fraction.numerator);
     return fractionResult.reduction();
 }
-
 
 std::vector<int> Fraction::getPrimeNumbers(int numBefore) {
     std::vector<int> list = {2};
@@ -127,22 +124,15 @@ int Fraction::getGCD(int num1, int num2) {
 std::ostream &operator<<(std::ostream &os, const Fraction &fraction) {
     Fraction result = fraction;
     result.reduction();
-    if (result.getDenominator() == 1) {
-        os << result.getNumerator();
-    } else {
-        os << result.getNumerator() << "/" << result.getDenominator();
-    }
-    return os;
-}
-
-std::ostream &operator<<(std::ostream &os, Fraction &fraction) {
-    Fraction result = fraction;
-    result.reduction();
-    if (result.getDenominator() == 1) {
-        os << result.getNumerator();
-    } else {
-        os << result.getNumerator() << "/" << result.getDenominator();
-    }
+    //todo
+    if (fraction.getNumerator() >= fraction.getDenominator()) {
+        if (result.getDenominator() == 1)
+            os << result.getNumerator();
+        else if (fraction.getNumerator() == fraction.getDenominator()) os << 1;
+        else os << result.getNumerator()/result.getDenominator() << " " << result.getNumerator()%result.getDenominator() << "/" << result.getDenominator();
+    }else {
+            os << result.getNumerator() << "/" << result.getDenominator();
+        }
     return os;
 }
 
@@ -171,11 +161,11 @@ Fraction operator/(Fraction f1, Fraction f2) {
 }
 
 double Fraction::toDouble() {
-    return (double)numerator/(double)denominator;
+    return (double) numerator / (double) denominator;
 }
 
 void Fraction::setFraction(int numerator, int denominator) {
-    setFraction(Fraction(numerator,denominator));
+    setFraction(Fraction(numerator, denominator));
 }
 
 

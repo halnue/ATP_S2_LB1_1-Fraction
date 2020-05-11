@@ -32,11 +32,11 @@ public:
 
     void setNumerator(int numerator);
 
-    int getNumerator();
+    int getNumerator() const;
 
     void setDenominator(int denominator);
 
-    int getDenominator();
+    int getDenominator() const;
 
     void setFraction(Fraction fraction);
 
@@ -44,7 +44,6 @@ public:
 
     double toDouble();
 
-    friend std::ostream &operator<<(std::ostream &os, Fraction &fraction);
     friend std::ostream &operator<<(std::ostream &os, const Fraction &fraction);
 
     friend std::istream &operator>>(std::istream &in, Fraction &f);

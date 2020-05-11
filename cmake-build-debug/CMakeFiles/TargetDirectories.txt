@@ -1,3 +1,3 @@
-C:/Users/Michael/CLionProjects/S2LB1.1/cmake-build-debug/CMakeFiles/S2LB1_1.dir
-C:/Users/Michael/CLionProjects/S2LB1.1/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Michael/CLionProjects/S2LB1.1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/ATP/ATP_S2_LB1.1/cmake-build-debug/CMakeFiles/S2LB1_1.dir
+C:/ATP/ATP_S2_LB1.1/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/ATP/ATP_S2_LB1.1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
